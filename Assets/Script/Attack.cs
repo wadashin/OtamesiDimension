@@ -35,12 +35,6 @@ public class Attack : MonoBehaviour
             }
         }
     }
-
-    //void ChengeV(float value)
-    //{
-    //    DOTween.To(() => HPBar.fillAmount, x => HPBar.fillAmount = x, value / 10, _chengeVI).OnComplete(() => Debug.Log("ダメージ"));
-    //}
-
     void ChengeV(float value)
     {
         DOTween.To(() => HPBar.fillAmount, x => HPBar.fillAmount = x, value, _chengeVI).OnComplete(() => Debug.Log("ダメージ"));
