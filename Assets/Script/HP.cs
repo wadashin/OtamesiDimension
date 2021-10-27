@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class HP : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class HP : MonoBehaviour
 
     float interval;
 
-    [SerializeField] Image HPBar;
+    //[SerializeField] Image HPBar;
     void Start()
     {
         m_Text.SetActive(false);
@@ -25,7 +26,6 @@ public class HP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         
         if (invincible)
         {
             time += Time.deltaTime;
@@ -37,7 +37,7 @@ public class HP : MonoBehaviour
             }
         }
 
-        HPBar.fillAmount = m_HP / 10;
+        //HPBar.fillAmount = m_HP / 10;
     }
 
     public void Mutekinisimasu(float invincibleTime)

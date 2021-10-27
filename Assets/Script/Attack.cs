@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class Attack : MonoBehaviour
 {
     HP hp;
-    [SerializeField] float m_Damage = 1;
+    [SerializeField] float _Damage = 1;
+    [SerializeField] Image HPBar;
+    [SerializeField] float _chengeVI = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +29,20 @@ public class Attack : MonoBehaviour
             hp = other.gameObject.GetComponent<HP>();
             if (hp.invincible == false)
             {
-                hp.m_HP -= m_Damage;
+                hp.m_HP -= _Damage;
+
+                ChengeV(hp.m_HP / 10);
             }
         }
+    }
+
+    //void ChengeV(float value)
+    //{
+    //    DOTween.To(() => HPBar.fillAmount, x => HPBar.fillAmount = x, value / 10, _chengeVI).OnComplete(() => Debug.Log("ダメージ"));
+    //}
+
+    void ChengeV(float value)
+    {
+        DOTween.To(() => HPBar.fillAmount, x => HPBar.fillAmount = x, value, _chengeVI).OnComplete(() => Debug.Log("ダメージ"));
     }
 }
