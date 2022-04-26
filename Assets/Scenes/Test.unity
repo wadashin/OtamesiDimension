@@ -489,7 +489,6 @@ MonoBehaviour:
   m_HP: 10
   invincible: 0
   m_Text: {fileID: 1736080122}
-  HPBar: {fileID: 791452779}
 --- !u!114 &275030793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,7 +559,7 @@ Transform:
   - {fileID: 1275599094}
   - {fileID: 1369558066}
   m_Father: {fileID: 538337899}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439714372
 GameObject:
@@ -754,8 +753,8 @@ RectTransform:
   m_Children:
   - {fileID: 1736080123}
   - {fileID: 614465188}
-  - {fileID: 290667112}
   - {fileID: 1343480618}
+  - {fileID: 290667112}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -986,7 +985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1398,7 +1397,7 @@ Transform:
   - {fileID: 1819121058}
   - {fileID: 791452778}
   m_Father: {fileID: 538337899}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1367805552
 GameObject:
@@ -1970,7 +1969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111f9ee383991b0459e855179238508d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Damage: 2
+  _Damage: 1
+  HPBar: {fileID: 791452779}
+  _chengeVI: 0.2
 --- !u!114 &1966154589
 MonoBehaviour:
   m_ObjectHideFlags: 0
